@@ -1,2 +1,7 @@
 .search-form
-    h1 search form
+	form(id='formSearch')
+		.awesomplete
+			input(type='text' id='textSearch' class='awesomplete' data-autofirst data-list='hola,jen,mejia' autocomplete='off' aria-autocomplete='list')
+			ul(hidden)
+		input(type='button' id='buttonSearch' value='Buscar')
+

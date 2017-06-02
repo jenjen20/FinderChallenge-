@@ -5,8 +5,9 @@ html(lang="es")
         meta(charset="utf-8")
         meta(viewport="width=device-width, initial-scale=1.0")
         link(href="https://fonts.googleapis.com/css?family=Proxima+Nova", rel="stylesheet", type="text/css")
-        link(href="/vendor/pure/pure-min.css", rel="stylesheet")
-        link(href="/styles/index.css", rel="stylesheet")
+        link(href="vendor/pure/pure-min.css", rel="stylesheet")
+        link(href="vendor/awesomplete/awesomplete.css", rel="stylesheet")
+        link(href="styles/index.css", rel="stylesheet")
 
     body
         .app.pure-g
@@ -16,14 +17,32 @@ html(lang="es")
                 .pure-u-7-24
                     include blocks/search-form
                 .pure-u-1-3
+                    a(href='#' class='link-search') Guardar búsqueda
             aside.filters.pure-u-1-4
+                div
+                    h4 Búsquedas guardadas
+                    .listmenu
+                        ul(id='saved')
+                div
+                    h4 Categorias
+                    .listmenu
+                        ul
+                            li
+                                a(href='#') Todos
             content.pure-u-3-4
+                #listbooks
             footer.pure-u-1
 
+        script(src="vendor/jquery/dist/jquery.min.js")
+        script(src="vendor/awesomplete/awesomplete.js")
+
         //- third party libraries
-        script(src="/vendor/underscore/underscore-min.js")
+        script(src="vendor/underscore/underscore-min.js")
 
         //- app scripts self
-        script(src="/scripts/global.js")
-        script(src="/scripts/search-form.js")
-        script(src="/scripts/app.js")
+        script(src="scripts/global.js")
+        script(src="scripts/search-form.js")
+        script(src="scripts/app.js")
+
+        script
+            include scripts/index.js

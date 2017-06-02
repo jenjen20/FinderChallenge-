@@ -1,0 +1,36 @@
+* {
+  font-family: "Proxima Nova";
+}
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.link-search {
+  margin: 1.6em 0;
+}
+.listmenu ul > li {
+  list-style: none;
+}
+.listmenu ul > li > a {
+  font-size: 16px;
+}
+.list > .menu-options {
+  display: none;
+}
+.list.active > .menu-options {
+  display: block;
+}
+.list.active {
+  background-color: #d9edf7;
+}
+.list {
+  background-color: #fff;
+}
+.search-form {
+  margin-top: 30px;
+}
+@media only screen and (max-width: 650px) {
+  .search-form {
+    display: none;
+  }
+}
